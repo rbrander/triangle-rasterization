@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle Rasterization</title>
+    <script src="app.mjs" type="module" defer></script>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #333;
+        color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <h1>Triangle Rasterization</h1>
+      <div style="display: flex; gap: 16px; align-items: center">
+        <strong>Options:</strong>
+        <span>
+          Draw Factor: <span id="txtDrawFactor">10</span>px / 1px
+          <input
+            type="range"
+            min="1"
+            max="20"
+            value="10"
+            class="slider"
+            id="DrawFactorSlider"
+          />
+        </span>
+        <button type="button" id="btnPause">Pause</button>
+        <label>
+          Draw Grid?
+          <input type="checkbox" id="chkDrawGrid" checked />
+        </label>
+        <label>
+          Draw Outline?
+          <input type="checkbox" id="chkDrawOutline" checked />
+        </label>
+      </div>
+    </div>
+    <canvas id="canvas" width="500" height="500">Canvas not supported</canvas>
+  </body>
+</html>
